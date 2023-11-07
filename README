@@ -1,3 +1,14 @@
-Install Ubuntu
-Install i3wm
+1. Install Ubuntu
+2. Install i3wm
+
+3. Swap escape with caps
+a) Create an Xmodmap file
+
+$echo "clear Lock keysym Caps_Lock = Escape keysym Escape = Caps_Lock add Lock = Caps_Lock | cat > ~/.Xmodmap
+
+b) Run xmodmap on startup via .profile
+
+$echo "xmodmap ~/.Xmodmap" | cat >> ~/.profile
+
+
 
