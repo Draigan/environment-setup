@@ -1,6 +1,9 @@
 1. Install Ubuntu
 2. Install i3wm
 
+2.5 Install kitty
+$sudo apt install kitty
+
 3. Swap escape with caps
 a) Create an Xmodmap file
 
@@ -10,5 +13,52 @@ b) Run xmodmap on startup via .profile
 
 $echo "xmodmap ~/.Xmodmap" | cat >> ~/.profile
 
+4. Install bob neovim version manager https://github.com/MordechaiHadad/bob
 
+a) Add bob to PATH in .bashrc 
+
+export PATH="/home/dre/.local/share/bob/nvim-bin:PATH"
+
+a) Installrust up https://www.rust-lang.org/tools/install
+
+b) Install gcc and g++ compilers
+
+$sudo apt install gcc 
+$sudo apt install g++
+
+c) Install bob from source
+
+$cargo install bob-nvim
+
+d) Install neovim latest version
+
+$bob install x.x.x  <--- put latest version there
+
+5. Install lazyvim 
+
+x) Install lazyvim config
+
+$git clone https://github.com/LazyVim/starter ~/.config/nvim
+
+x) Run lazyvim with nvim (bunch of errors pop up)
+
+a) Install luarocks
+
+$sudo apt install luarocks
+
+b) install jsregexp
+
+$sudo luarocks install jsregexp
+
+c) Install ripegrep for telescope which is how we find files quickly.
+
+$sudo apt-get install ripgrep 
+
+d) Install xclip to be able to copy to clipboard from nvim
+
+$sudo apt install xclip
+
+f) Install fd-find
+
+$sudo apt-get install fd-find
 
